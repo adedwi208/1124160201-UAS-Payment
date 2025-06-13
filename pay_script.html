@@ -69,10 +69,10 @@
                             required
                         >
                             <option value="">Pilih produk...</option>
-                            <option value="basic" data-price="50000">Paket Basic - Rp 50.000</option>
-                            <option value="premium" data-price="100000">Paket Premium - Rp 100.000</option>
-                            <option value="professional" data-price="200000">Paket Professional - Rp 200.000</option>
-                            <option value="enterprise" data-price="500000">Paket Enterprise - Rp 500.000</option>
+                            <option value="basic" data-price="250000">Sage Denim - Rp 250.000</option>
+                            <option value="premium" data-price="600000">Nyoel Denim - Rp 600.000</option>
+                            <option value="professional" data-price="900000">Momotaro Denim - Rp 900.000</option>
+                            <option value="enterprise" data-price="750000">Wingman Denim - Rp 750.000</option>
                         </select>
                     </div>
 
@@ -267,6 +267,15 @@
         let transactionIdCounter = 1;
         let currentDiscount = 0;
         let appliedPromoCode = '';
+
+        // Database kode promo
+        const promoCodes = {
+            'DENIMDAY' : {discount: 10, type: 'percentage', description: 'Diskon 10%'},
+            'DENIMCLEAR' : {discount: 20, type: 'percentage', description: 'Diskon 20%'},
+            'DENIMHYP' : {discount: 50000, type: 'fixed', description: 'Diskon Rp 50.000'},
+            'DENIMCRUSH' : {discount: 25, type: 'percentage', description: 'Diskon 25%'},
+            'DENIMTRASH' : {discount: 100000, type: 'fixed', description: 'Diskon Rp 100.000'}
+        }
 
 
         // Mapping metode pembayaran dengan warna
